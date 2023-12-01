@@ -13,7 +13,11 @@
 
 name: release
 
+
+
 on:
+  release:
+    types: [published, edited]
   workflow_dispatch: # input version manually. Overrides push tag
     inputs:
       tag:
