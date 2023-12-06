@@ -86,7 +86,7 @@ if [ "$DOCKER_ARCH" = "multiarch" ]; then
 else
 	if [ $LOCAL -eq 1 ]; then
 		DOCKER_ARGS="--load -t $DOCKER_ARCH/$DOCKER_IMAGE"
-		DOCKER_EXPORT="($DOCKER_ARCH/$DOCKER_IMAGE ghcr.io/eclipse/kuksa.val.services/$DOCKER_IMAGE:prerelease)"
+		DOCKER_EXPORT="($DOCKER_ARCH/$DOCKER_IMAGE ghcr.io/pratikganer/services2/$DOCKER_IMAGE:prerelease)"
 	else
 		DOCKER_ARGS="--platform linux/$DOCKER_ARCH -t $DOCKER_ARCH/$DOCKER_IMAGE --output type=oci,dest=$DOCKER_EXPORT"
 	fi
