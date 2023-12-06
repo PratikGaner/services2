@@ -101,8 +101,8 @@ echo "# docker buildx build $DOCKER_ARGS -f Dockerfile $CONTEXT_DIR"
 DOCKER_BUILDKIT=1 docker buildx build $DOCKER_ARGS -f Dockerfile "$CONTEXT_DIR" $DOCKER_EXT
 
 if [ $? -eq 0 ]; then
-	echo "docker image tag $DOCKER_ARCH/$DOCKER_IMAGE ghcr.io/eclipse/kuksa.val.services/$DOCKER_IMAGE:prerelease"
-	docker image tag $DOCKER_ARCH/$DOCKER_IMAGE ghcr.io/eclipse/kuksa.val.services/$DOCKER_IMAGE:prerelease
+	echo "docker image tag $DOCKER_ARCH/$DOCKER_IMAGE ghcr.io/pratikganer/services2/$DOCKER_IMAGE:prerelease"
+	docker image tag $DOCKER_ARCH/$DOCKER_IMAGE ghcr.io/pratikganer/services2/$DOCKER_IMAGE:prerelease
 	echo "# Exported $DOCKER_ARCH/$DOCKER_IMAGE in $DOCKER_EXPORT"
 	docker image ls | grep "/$DOCKER_IMAGE"
 fi
